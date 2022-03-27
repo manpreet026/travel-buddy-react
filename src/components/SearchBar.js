@@ -4,33 +4,14 @@ import './Serach_bar.css';
 import SearchIcon from "@material-ui/icons/Search";
 
 export default function SearchBar(props) {
-    const [AnimeList, SetAnimeList] = useState([]);
-    const GetAnimeList = async (query) => {
-      console.log(query);
-      const temp = await fetch(`http://127.0.0.1:5000/${query}`).then(res => res.json());
-      Object.values(temp).map(item => {
-        SetAnimeList(item);
-      });
-    };
     const handleSearch=() => {
-      GetAnimeList(wordEnter);
-      setWordEnter("");
-      setFilteredData([]);
+      console.log(wordEnter);
+      setWordEnter(wordEnter);
     };
-
-    const [filteredData,setFilteredData]=useState([]);
     const [wordEnter,setWordEnter]=useState("");
     const handleFilter = event =>{
         const enteredWord = event.target.value;
         setWordEnter(enteredWord)
-        if (enteredWord === "") {
-            setFilteredData([]);
-            return;
-        }
-        const temp= props.inputName.filter(value =>{
-            return value.toLowerCase().includes(enteredWord.toLowerCase());
-        });
-        setFilteredData(temp);
     };
     return (
         <>
