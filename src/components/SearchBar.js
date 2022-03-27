@@ -2,6 +2,8 @@ import React from 'react';
 import { useEffect, useState } from "react";
 import './Serach_bar.css';
 import SearchIcon from "@material-ui/icons/Search";
+import Page3 from './Page3';
+import Navcity from './Navcity';
 
 export default function SearchBar(props) {
     const handleSearch=() => {
@@ -21,6 +23,8 @@ export default function SearchBar(props) {
                 <div className="icon" onClick={handleSearch}><SearchIcon/></div>
             </div>
         </div>
+        <Navcity/>
+        <Page3/>
         </>
     );
 }

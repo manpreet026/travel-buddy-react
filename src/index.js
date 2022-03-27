@@ -4,13 +4,12 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Navbar from './components/Navbar';
 import SearchBar from './components/SearchBar';
-import Page3 from './components/Page3';
+
 
 ReactDOM.render(
     <>
     <Navbar/>
     <SearchBar/>
-    <Page3/>
     </>,
   document.getElementById('root')
 );
