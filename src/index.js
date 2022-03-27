@@ -10,7 +10,6 @@ ReactDOM.render(
     <>
     <Navbar/>
     <SearchBar/>
-    <Homeabc/>
     </>,
   document.getElementById('root')
 );
