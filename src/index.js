@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Homeabc from './components/Homepg';
 import Navbar from './components/Navbar';
 import SearchBar from './components/SearchBar';
 
