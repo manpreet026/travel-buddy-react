@@ -4,10 +4,12 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Homeabc from './components/Homepg';
 import Navbar from './components/Navbar';
+import SearchBar from './components/SearchBar';
 
 ReactDOM.render(
     <>
     <Navbar/>
+    <SearchBar/>
     <Homeabc/>
     </>,
   document.getElementById('root')

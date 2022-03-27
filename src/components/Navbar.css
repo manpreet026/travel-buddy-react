@@ -5,6 +5,9 @@
     color: white;
     font-family: Helvetica;
     font-weight: 300;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .navbar__title {
