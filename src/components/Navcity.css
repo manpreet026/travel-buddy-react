@@ -9,7 +9,7 @@ ul{
 	margin: 50px auto;
 	width: 80%;
 	list-style: none;
-	background: rgba(0, 0, 0, 0.2);
+	background: rgba(0, 0, 0, 0.4);
     justify-content: space-between;
 }
 
