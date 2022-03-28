@@ -8,7 +8,7 @@ export default function Navcity() {
                 <li><a href="/">Places to visit</a></li>
                 <li><a href="/">Hotels</a></li>
                 <li><a href="/">Restaurants</a></li>
-                <li><a href="/">Shpos</a></li>
+                <li><a href="/">Shops</a></li>
             </ul>
         </div>
     )
