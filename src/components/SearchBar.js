@@ -5,6 +5,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import Page2 from './Page2';
 import Page1 from './Page1';
 import './Navcity.css';
+import Page3 from './Page3';
 
 export default function SearchBar() {
     const [pt,Setpt]=useState(true);
@@ -27,9 +28,18 @@ export default function SearchBar() {
             SethotelsList(item);
         });
       };
+    const [marketList, SetmarketList] = useState([]);
+    const GetmarketList = async (query) => {
+        console.log(query);
+        const temp = await fetch(`http://127.0.0.1:5000/market`).then(res => res.json());
+        Object.values(temp).map(item => {
+            SetmarketList(item);
+        });
+      };
       const handleSearch=() => {
         GetplaceList(wordEnter);
         GethotelsList(wordEnter);
+        GetmarketList(wordEnter);
         console.log(placeList);
       };
     const [wordEnter,setWordEnter]=useState("");
@@ -79,6 +89,7 @@ export default function SearchBar() {
         </div>)}
         {pt && placeList.length!==0 &&(<Page1 title= {placeList}/>)}
         {ht && hotelsList.length!==0 &&(<Page2 title= {hotelsList}/>)}
+        {st && hotelsList.length!==0 &&(<Page3 title= {marketList}/>)}
         </>
     );
 }
